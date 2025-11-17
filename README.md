@@ -5,7 +5,7 @@
 ## 📋 Features
 
 ✨ **ML-Powered Intelligence**
-- Multi-model ensemble classification (Decision Tree, Random Forest, KNN, Naive Bayes)
+- Multi-model ensemble classification (Decision Tree,  Random Forest, KNN, Naive Bayes)
 - Automatic file categorization and organization
 - Perceptual hashing for duplicate detection
 
