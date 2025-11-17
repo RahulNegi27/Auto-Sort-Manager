@@ -1,6 +1,6 @@
 # 🚀 AutoSort - ML Powered File Manager
 
-> Intelligent file organization with machine learning, OS visualizers, and advanced analytics.
+> Intelligent file organization with machine learning, OS visualizers, and advanced analytics.        
 
 ## 📋 Features
 
