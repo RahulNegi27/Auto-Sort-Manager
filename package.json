@@ -1,0 +1,91 @@
+{
+  "name": "autosort-app",
+  "version": "1.0.0",
+  "description": "ML Powered File Manager & OS Visualization Suite",
+  "main": "dist/electron-main/main.js",
+  "homepage": "./",
+  "author": "AutoSort Team",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:renderer\" \"wait-on http://localhost:3000 && npm run dev:electron\"",
+    "dev:renderer": "cd renderer && npm run dev",
+    "dev:electron": "cross-env NODE_ENV=development electron dist/electron-main/main.js",
+    "build": "npm run build:renderer && npm run build:electron",
+    "build:renderer": "cd renderer && npm run build",
+    "build:electron": "tsc --project tsconfig.electron.json",
+    "pack": "electron-builder --dir",
+    "dist": "npm run build && electron-builder",
+    "dist:all": "npm run build && electron-builder -mwl",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "@types/node": "^20.0.0",
+    "concurrently": "^7.6.0",
+    "cross-env": "^7.0.3",
+    "electron": "^26.0.0",
+    "electron-builder": "^24.6.4",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0",
+    "wait-on": "^7.0.1"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.10.0",
+    "@tensorflow/tfjs-node": "^4.10.0",
+    "archiver": "^5.3.1",
+    "axios": "^1.13.2",
+    "chokidar": "^3.5.3",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.3",
+    "extract-zip": "^2.0.1",
+    "sharp": "^0.32.0",
+    "check-disk-space": "^2.1.0",
+    "sqlite3": "^5.1.7"
+  },
+  "build": {
+    "appId": "com.autosort.filemanager",
+    "productName": "AutoSort",
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    },
+    "files": [
+      "electron-main/**/*",
+      "renderer/dist/**/*",
+      "shared/**/*",
+      "db/**/*",
+      "node_modules/**/*"
+    ],
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.productivity"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "certificateFile": null,
+      "certificatePassword": null
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
