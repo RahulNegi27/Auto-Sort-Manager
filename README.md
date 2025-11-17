@@ -328,14 +328,3 @@ Contributions are welcome! Please follow the guidelines:
 3. Commit changes (`git commit -m 'Add amazing feature'`)
 4. Push to branch (`git push origin feature/amazing-feature`)
 5. Open Pull Request
-
-## 📞 Support
-
-For issues and questions:
-- GitHub Issues: [Create an issue](https://github.com/autosort/autosort-app/issues)
-- Documentation: [Wiki](https://github.com/autosort/autosort-app/wiki)
-- Email: support@autosort.app
-
----
-
-**Built with ❤️ using Electron, React, TypeScript, and Machine Learning**
