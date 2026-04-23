@@ -4,24 +4,24 @@
 
 ## 📋 Features
 
-✨ **ML-Powered Intelligence**
+ **ML-Powered Intelligence**
 - Multi-model ensemble classification (Decision Tree,  Random Forest, KNN, Naive Bayes)
 - Automatic file categorization and organization
 - Perceptual hashing for duplicate detection
 
-📁 **File Management**
+ **File Management**
 - Intelligent file explorer with grid/list views
 - Smart search with natural language processing
 - Batch operations (compress, move, delete)
 - Real-time file scanning and indexing
 
-🗜️ **Compression & Duplicates**
+ **Compression & Duplicates**
 - Multi-format compression (ZIP, TAR, GZIP, 7Z)
 - MD5/SHA256 hash-based duplicate detection
 - Perceptual image hashing
 - Space savings calculation
 
-📊 **Analytics & Visualization**
+ **Analytics & Visualization**
 - Real-time system monitoring
 - File distribution charts
 - Classification accuracy trends
@@ -33,7 +33,7 @@
 - Memory allocation visualization
 - Deadlock detection demo
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 autosort-app/
@@ -65,7 +65,7 @@ autosort-app/
 └── package.json          # Root dependencies
 ```
 
-## 📦 Installation
+##  Installation
 
 ### Prerequisites
 - **Node.js** >= 16.x
@@ -203,7 +203,7 @@ POST /train                  # Train models
 POST /predict               # Classify files
 ```
 
-## 🛠️ Configuration
+##  Configuration
 
 ### Tailwind CSS Classes
 
@@ -222,7 +222,7 @@ Settings are stored in SQLite database:
 - Performance settings
 - File organization rules
 
-## 📚 Component Guide
+##  Component Guide
 
 ### Layout Components
 - `Sidebar.tsx` - Navigation sidebar
@@ -243,7 +243,7 @@ Settings are stored in SQLite database:
 - `useDebounce` - Debounce utility
 - `useDashboard` - Dashboard data
 
-## 🚀 Deployment
+##  Deployment
 
 ### Windows
 
@@ -272,7 +272,7 @@ npm run dist
 # Output: dist/AutoSort-1.0.0.AppImage
 ```
 
-## 🔒 Security
+##  Security
 
 - **Context Isolation**: Renderer isolated from main process
 - **Preload Bridge**: Safe IPC communication
@@ -280,7 +280,7 @@ npm run dist
 - **Safe File Paths**: Validated path handling to prevent directory traversal
 - **Database Encryption**: Optional SQLite encryption support
 
-## 📊 Data Storage
+##  Data Storage
 
 All application data stored locally in `autosort.db`:
 - Job history
@@ -315,16 +315,3 @@ rm autosort.db
 npm run dev
 ```
 
-## 📝 License
-
-MIT © 2024 AutoSort Team
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow the guidelines:
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open Pull Request
