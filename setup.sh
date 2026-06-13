@@ -2,9 +2,7 @@
 
 # AutoSort Application Setup Script
 # This script automates the complete setup process
-
 set -e
-
 echo "🚀 AutoSort Setup Script"
 echo "========================"
 echo ""
