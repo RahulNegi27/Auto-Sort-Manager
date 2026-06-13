@@ -34,8 +34,7 @@ export class AutoSortCore {
   ): Promise<AutoSortResult> {
     this.isRunning = true;
     this.dryRunActive = Boolean(options.dryRun);
-    // Propagate dry-run to FileSystemManager to guard all mutating operations,
-    // but preserve any existing global dry-run flag set externally.
+
     const fsCtor = (this.fsManager.constructor as any);
     const previousGlobalDryRun = Boolean(fsCtor.dryRunEnabled);
     fsCtor.dryRunEnabled = previousGlobalDryRun || Boolean(options.dryRun);
